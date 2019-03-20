@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+@font-face {
+    font-family: SansationLight;
+    src: url('./assets/font/SansationLight.woff');
+    }
+    
+    *{
+    font-size: 14px;
+    font-family: 'arial', sans-serif;
+    }
+
+.mat-form-field {
+    display: block !important;
+    .mat-form-field-underline {
+        background-color: slateblue;
+    }
+}
+
+.mat-form-field-flex {
+     background-color: white !important;
+    }
