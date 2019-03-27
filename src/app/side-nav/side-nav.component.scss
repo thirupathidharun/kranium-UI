@@ -1,0 +1,317 @@
+
+// .disp-flex {
+//     display: flex !important;
+//     height: 100% !important;
+//     flex-direction: column !important;
+// }
+
+$white: #fff;
+
+a {
+    color: $white;
+}
+
+.height-100 {
+    height: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+// .pad-top-btm {
+//     padding-top: 25px;
+//     padding-bottom: 25px;
+// }
+
+.line {
+    border-bottom: 1px solid #2A3035;
+} 
+
+.pad-left-8 {
+  padding-left: 8px;  
+}
+
+.search-filter {
+    left: 25px;
+    top: 7px !important;
+    position: relative;
+}
+
+.page-title {
+    color: $white;
+    top: 4px !important;
+}
+
+// .pad-bottom {
+// padding-bottom: 12px;
+// padding-top: 8px;
+// }
+
+ul {
+    list-style-type: none;
+  padding-left: 40px;
+}
+
+.menu-left-pad {
+    padding-left: 40px;
+    color: $white;
+} 
+
+.menu-padd {
+    padding-top: 25px;
+    padding-left: 75px;
+    padding-bottom: 25px;
+}
+
+.bg-img {
+    background: url("../../assets/images/kraniumsignin.jpg");
+    width: 100%;
+    height: 257px;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    // opacity: 0.1;
+}
+
+#myImage {
+    width:220px;
+    height:220px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.home-icon {
+    top: 270px;
+    position: absolute;
+    color: $white;
+}
+
+.person-icon {
+    top: 280px;
+    position: absolute;
+    color: $white;
+}
+
+.appoinment-icon {
+    top: 428px;
+    position: absolute;
+    color: $white;
+}
+
+.logout-icon {
+    top: 470px;
+    position: absolute;
+    color: $white;
+}
+
+.tool-bar-clr {
+    background-color: #48a2c7;
+}
+
+.btn-clr-wht {
+    color: $white;
+}
+
+.toggle-btn-clr {
+    color: $white;
+}
+
+// .side-nav-ht {
+//     height: 100vh;
+// }
+
+.nav-bar-clr {
+   background-color: #337ab7;
+}
+
+.bt-clr {
+    color: gold;
+}
+
+.pad-left-0 {
+    padding-left: 0px;
+}
+
+.side-nav-bg {
+    background-color: #2e353a;
+    height: 100%;
+}
+
+.pad-left-40 {
+    padding-left: 40px;
+}
+
+.side-wt {
+    width: 75%;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 576px) {
+
+    .home-icon {
+        top: 277px;
+        color: $white;
+        position: absolute;
+    }
+
+    .pad-bottom {
+        padding-bottom: 12px;
+        padding-top: 8px;
+        }
+        .pad-top-btm {
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+        // .side-nav-ht {
+        //     height: 89.4vh;
+        // }
+        .home-icon {
+            top: 265px;
+            position: absolute;
+            color: $white;
+        }
+        
+        .person-icon {
+            top: 305px;
+            position: absolute;
+            color: $white;
+        }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+
+    .home-icon {
+        top: 265px;
+        color: $white;
+        position: absolute;
+    } 
+
+    .person-icon {
+        top: 305px;
+        position: absolute;
+        color: $white;
+    }
+
+    .side-wt {
+        width: 20%;
+    }
+    // .side-nav-ht {
+    //     height: 92.4vh;
+    // }
+    .pad-bottom {
+        padding-bottom: 12px;
+        padding-top: 8px;
+        }
+        .pad-top-btm {
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+    
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    
+    .home-icon {
+        top: 280px;
+        color: $white;
+        position: absolute;
+    }
+    
+    .side-wt {
+        width: 30%;
+    }
+
+    // .side-nav-ht {
+    //     height: 100vh;
+    // }
+    .pad-bottom {
+        padding-bottom: 12px;
+        padding-top: 8px;
+        }
+        .pad-top-btm {
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+        .home-icon {
+            top: 265px;
+            position: absolute;
+            color: $white;
+        }
+        
+        .person-icon {
+            top: 305px;
+            position: absolute;
+            color: $white;
+        }
+     }
+
+
+     @media only screen and (min-width: 1025px) and (max-width: 1366px) {
+        .side-wt {
+            width: 20%;
+        }
+    
+        // .side-nav-ht {
+        //     height: 89.4vh;
+        // }
+        .pad-top-btm {
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+        .pad-bottom {
+            padding-bottom: 12px;
+            padding-top: 8px;
+            }
+
+            .home-icon {
+                top: 265px;
+                position: absolute;
+                color: $white;
+            }
+            
+            .person-icon {
+                top: 305px;
+                position: absolute;
+                color: $white;
+            }
+            
+         }
+
+         @media only screen and (min-width: 577px) and (max-width: 767px) and (orientation: landscape) {
+            
+            .side-wt {
+                width: 35%;
+            }
+    }
+    
+//     @media only screen and (min-width: 320px) and (max-width: 576px) {
+
+//         .side-wt {
+//             width: 20%;
+//         }
+    
+//         .side-nav-ht {
+//             height: 100vh;
+//         }
+    
+//     }
+    
+//     @media only screen and (min-width: 577px) and (max-width: 768px) {
+
+//         .side-wt {
+//             width: 20%;
+//         }
+    
+//         .side-nav-ht {
+//             height: 100vh;
+//         }
+
+        
+    
+//     }
+    
+    // @media only screen and (min-width: 577px) and (max-width: 768px) and (orientation: landscape) {
+    
+
+    // }
