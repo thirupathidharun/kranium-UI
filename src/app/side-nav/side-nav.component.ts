@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-
 import { ActivatedRoute } from '@angular/router';
+
+import { CommonService } from '../service/common-service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-side-nav',
@@ -13,20 +15,31 @@ export class SideNavComponent implements OnInit {
   opened: boolean;
   screenWidth: number;
   pageTitle: any;
+  showHeader = true;
+  isAuthenticated = false;
 
-  constructor(public route: ActivatedRoute) {
+  constructor(public route: ActivatedRoute, public commonService: CommonService) {
     this.initHome();
   }
 
   ngOnInit() {
-    // console.log(this.events);
-    // console.log(this.opened);
+    this.commonService.isAuthenticated.subscribe((res) => {
+      this.isAuthenticated = res;
+    });
   }
 
   private initHome() {
-    this.route.data.subscribe((res) => {
-      this.pageTitle = res;
+    this.route.data.subscribe((result) => {
+      this.pageTitle = result;
     });
+  }
+
+  toggleState(e) {
+    if (e === 'open') {
+      this.showHeader = false;
+    } else {
+      this.showHeader = true;
+    }
   }
 
 }

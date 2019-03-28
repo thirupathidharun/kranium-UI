@@ -14,6 +14,9 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { HomeComponent } from './home/home.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { SearchFilterComponent } from './search-filter/search-filter.component';
+import { BookAppoinmentComponent } from './book-appoinment/book-appoinment.component';
+import { CommonService } from './service/common-service';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,9 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     SignInComponent,
     HomeComponent,
     SideNavComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    SearchFilterComponent,
+    BookAppoinmentComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +49,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     MatSnackBarModule,
     BrowserAnimationsModule
   ],
-  providers: [{provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 2000}}],
+  providers: [CommonService, {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 2000}}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

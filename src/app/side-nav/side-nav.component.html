@@ -2,22 +2,17 @@
     
   </div> -->
 <section class="height-100">
-  <mat-toolbar class="tool-bar-clr">
+  <mat-toolbar *ngIf="isAuthenticated" class="tool-bar-clr">
     <div class="col-md-12 col-sm-12 col-12 row">
       <div class="col-md-4 col-sm-4 col-2">
         <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="sidenav.toggle()">
           <mat-icon class="btn-clr-wht">menu</mat-icon>
         </button>
       </div>
-      <!-- <span *ngFor="let e of events"> -->
-      <div class="col-md-1 col-sm-2 offset-1 col-1 page-title">
+      <div *ngIf="showHeader" class="col-md-1 col-sm-2 offset-1 col-1 page-title">
         {{pageTitle.pageName}}
       </div>
-      <!-- <ng-template #notitle>
-        aa
-        </ng-template> -->
-      <!-- </span> -->
-      <div class="col-md-1 col-sm-2 offset-5 col-2 page-title search-filter">
+      <div *ngIf="showHeader" class="col-md-1 col-sm-2 offset-5 col-2 page-title search-filter">
         <span><i class="material-icons">
             filter_list
           </i></span>
@@ -34,7 +29,7 @@
   </mat-toolbar>
   <mat-sidenav-container class="example-container side-nav-ht">
     <mat-sidenav class="nav-bar-clr side-wt pad-left-30" #sidenav mode='over' [(opened)]="opened"
-      (opened)="events.push('open!')" (closed)="events.push('close!')">
+      (opened)="events.push('open!');toggleState('open')" (closed)="events.push('close!');toggleState('close')">
       <div class="col-md-12 col-sm-12 col-12 pad-left-0 bg-img" style="background: rgba(79,162,196,0.8);">
         <span class="col-md-12 col-sm-12 col-12">
           <img src="./kraniumsignin.jpg" id="myImage" />
@@ -61,7 +56,7 @@
               date_range
             </i>
           </span>
-          <li class="line menu-left-pad pad-bottom"><a routerLink="/home" (click)="sidenav.toggle()">Book Appoinment</a>
+          <li class="line menu-left-pad pad-bottom"><a routerLink="/bookappoinment" (click)="sidenav.toggle()">Book Appoinment</a>
           </li>
           <span>
             <i class="material-icons logout-icon">
