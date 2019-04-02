@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { CommonService } from '../service/common-service';
@@ -11,6 +11,7 @@ import { Observable } from 'rxjs';
 })
 export class SideNavComponent implements OnInit {
 
+  @Input() title: string;
   events: string[] = [];
   opened: boolean;
   screenWidth: number;
@@ -18,7 +19,9 @@ export class SideNavComponent implements OnInit {
   showHeader = true;
   isAuthenticated = false;
 
-  constructor(public route: ActivatedRoute, public commonService: CommonService) {
+  constructor(public route: ActivatedRoute,
+              public commonService: CommonService,
+              private detectChangeRef: ChangeDetectorRef) {
     this.initHome();
   }
 
@@ -26,12 +29,21 @@ export class SideNavComponent implements OnInit {
     this.commonService.isAuthenticated.subscribe((res) => {
       this.isAuthenticated = res;
     });
+    this.commonService.pageTitle.subscribe((result) => {
+      this.pageTitle = result;
+      this.detectChangeRef.detectChanges();
+    });
   }
 
   private initHome() {
-    this.route.data.subscribe((result) => {
-      this.pageTitle = result;
-    });
+    // this.route.data.subscribe((result) => {
+    //   console.log(result);
+    //   debugger;
+    //   if (result) {
+    //     debugger;
+    //     this.pageTitle = result;
+    //   }
+    // });
   }
 
   toggleState(e) {

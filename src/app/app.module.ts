@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatToolbarModule, MatInputModule, MatButtonModule, MatDatepickerModule, MatNativeDateModule, MatSidenavModule,
   MatIconModule, MatSnackBarModule, MatListModule, MatDialogModule, MatCardModule, MatFormFieldModule,
-  MatCheckboxModule, MatSelectModule, MatRadioModule, MAT_SNACK_BAR_DEFAULT_OPTIONS
+  MatCheckboxModule, MatSelectModule, MatRadioModule, MAT_SNACK_BAR_DEFAULT_OPTIONS, MatAutocompleteModule
 } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 
@@ -17,6 +17,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { SearchFilterComponent } from './search-filter/search-filter.component';
 import { BookAppoinmentComponent } from './book-appoinment/book-appoinment.component';
 import { CommonService } from './service/common-service';
+import { AddEditPatientComponent } from './add-edit-patient/add-edit-patient.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CommonService } from './service/common-service';
     SideNavComponent,
     ToolbarComponent,
     SearchFilterComponent,
-    BookAppoinmentComponent
+    BookAppoinmentComponent,
+    AddEditPatientComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +49,7 @@ import { CommonService } from './service/common-service';
     MatFormFieldModule,
     MatSelectModule,
     MatSnackBarModule,
+    MatAutocompleteModule,
     BrowserAnimationsModule
   ],
   providers: [CommonService, {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 2000}}],

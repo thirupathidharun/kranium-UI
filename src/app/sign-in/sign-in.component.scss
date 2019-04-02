@@ -3,10 +3,6 @@
     margin-top: 50px;
 }
 
-.height-100 {
-    height: 100%;
-}
-
 .login-height {
     height: 100%;
     position: absolute;
@@ -20,16 +16,8 @@
     margin-top: 10px;
 }
 
-.pad-top-80 {
-    padding-top: 80px;
-}
-
-.mrgn-top-38 {
+.mt-38 {
     margin-top: 38px;
-}
-
-.mrgn-top-25 {
-    margin-top: 25px;
 }
 
 .user-icon {
@@ -48,11 +36,6 @@ input {
     padding-left: 49px;
 }
 
-
-.mrgn-top-15 {
-    margin-top: 15px;
-}
-
 .button-clr {
     background-color: #2e353a;
     color: white;
@@ -68,12 +51,7 @@ input {
 }
 
 .logoImg {
-    // background-image: url("../../assets/images/KraniumHealthLogo.png");
     height: 100px;
-}
-
-.no-pad {
-    padding: 0 0 0 0;
 }
 
 .bg-white {
@@ -88,49 +66,16 @@ input {
 
 //  @media only screen and (min-width: 769px) and (max-width: 1200px) {
 
-// .login-img {
-//     background: url("../../assets/images/kraniumsignin.jpg") no-repeat center center fixed;
-//     width: 100%;
-//     height: 100vh;
-//     position: fixed;
-//     background-size: cover;
-// }
 //  }
 
 // @media only screen and (min-width: 320px) and (max-width: 576px) {
 
-//     .login-img {
-//         background: url("../../assets/images/kraniumsignin.jpg") no-repeat center center fixed;
-//         width: 100%;
-//         // height: 100vh;
-//         // position: fixed;
-//         background-size: cover;
-//     }
 // }
 
 // @media only screen and (min-width: 577px) and (max-width: 768px) {
 
-// .login-img {
-//     background: url("../../assets/images/kraniumsignin.jpg") no-repeat center center fixed;
-//     width: 100%;
-//     // height: 100vh;
-//     // position: fixed;
-//     background-size: cover;
-// //     -webkit-background-size: cover !important;
-// //   -moz-background-size: cover !important;
-// //   -o-background-size: cover !important;
-// }
-
 // }
 
 // @media only screen and (min-width: 577px) and (max-width: 768px) and (orientation: landscape) {
-
-//     .login-img {
-//         background: url("../../assets/images/kraniumsignin.jpg") no-repeat center center fixed;
-//         width: 100%;
-//         // height: 100vh;
-//         // position: absolute;
-//         background-size: cover;
-//     }
     
 // }

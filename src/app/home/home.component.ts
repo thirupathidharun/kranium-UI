@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import { CommonService } from '../service/common-service';
 
@@ -10,10 +11,17 @@ import { CommonService } from '../service/common-service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public commonService: CommonService) {
-   }
+  constructor(public commonService: CommonService, public route: ActivatedRoute) {
+  }
 
   ngOnInit() {
+    this.route.data.subscribe((result) => {
+      // if (result) {
+      //   debugger
+      this.commonService.pageTitle.next(result.pageName);
+      // this.pageTitle = result;
+      // }
+    });
   }
 
 }

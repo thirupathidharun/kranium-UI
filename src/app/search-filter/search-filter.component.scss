@@ -1,0 +1,26 @@
+
+.large-button {
+    min-width: 110px;
+}
+
+.button-clr {
+    background-color: #2e353a;
+    color: white;
+    border-radius: 0 !important;
+}
+
+.left-0 {
+    left: 0px;
+    position: absolute;
+}
+
+@media only screen and (min-width: 992px) {
+    .fixed-btm-unset {
+        position: relative;
+        margin-top: 45px;
+    }
+    .mt-lg-100 {
+        margin-top: 100px;
+    }
+}
+
